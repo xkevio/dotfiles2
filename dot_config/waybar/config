@@ -1,0 +1,102 @@
+// -*- mode: jsonc -*-
+{
+    "spacing": 8, // Gaps between modules (10px)
+    "modules-left": [
+        "hyprland/workspaces",
+        "custom/separator",
+        "mpris"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "cpu",
+        "memory",
+        "pulseaudio",
+        "custom/separator",
+        "clock",
+        "custom/separator",
+        "custom/power"
+    ],
+    // Modules configuration
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{name}",
+    },
+    // Modules configuration
+    // "niri/workspaces": {
+    //     "disable-scroll": true,
+    //     "all-outputs": false,
+    //     "warp-on-scroll": false,
+    //     "format": "{value}",
+    // },
+    "hyprland/window": {
+      "icon": true,
+      "icon-size": 18,
+      "separate-outputs": true,
+      "max-length": 50
+    },
+    // "niri/window": {
+    //   "icon": true,
+    //   "icon-size": 18,
+    //   "separate-outputs": true,
+    //   "max-length": 50
+    // },
+    "clock": {
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "weeks-pos": "left",
+            "on-scroll": 1,
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        },
+        "interval": 1
+    },
+    "cpu": {
+        "format": "  {usage}%",
+        "on-click": "kitty btop",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "  {percentage}%"
+    },
+    "pulseaudio": {
+        "scroll-step": 5,
+        "format": "{icon}  {volume}%",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pwvucontrol"
+    },
+    "mpris": {
+        "format": "{player_icon} \"{title}\" – {artist}",  
+        "format-paused": "{status_icon} <i>\"{title}\" – {artist}</i>",
+        "max-length": 45,
+        "player-icons": {
+            "spotify": "",
+            "default": "󰝚"
+        },
+        "status-icons": {
+            "paused": "⏸"
+        }
+    },
+    "custom/power": {
+        "format" : " ⏻ ",
+    		"tooltip": false,
+    		"on-click": "wlogout -b 4"
+    },
+    "custom/separator": {
+        "format": "|",
+        "tooltip": false,
+        "interval": 0
+    }
+} 

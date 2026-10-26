@@ -1,0 +1,86 @@
+* {
+	font-family: "JetBrainsMono Nerd Font", monospace;
+	font-size: 13px;
+	font-weight: 600;
+	min-height: 25px;
+}
+
+window#waybar {
+	/* This is supposed to be used with a blur. */
+	background-color: transparent;
+	color: white;
+	transition-property: background-color;
+	transition-duration: .5s;
+}
+
+button {
+	border: none;
+	border-radius: 0;
+}
+
+button:hover {
+	box-shadow: none;
+	/* Remove predefined box-shadow */
+	text-shadow: none;
+	/* Remove predefined text-shadow */
+	background: none;
+	/* Remove predefined background color (white) */
+	transition: none;
+	/* Disable predefined animations */
+}
+
+#workspaces button {
+	padding: 0 7px;
+	background-color: transparent;
+	color: silver;
+	border-bottom: 1px solid transparent;
+}
+
+#workspaces button:hover {
+	transition: none;
+	background: rgba(128, 128, 128, 0.25);
+}
+
+#workspaces button.active {
+	background: rgba(128, 128, 128, 0.5);
+	color: white;
+	border-bottom: 1px solid white;
+}
+
+#cpu,
+#memory,
+#pulseaudio,
+#clock {
+	padding: 0 5px;
+}
+
+#cpu:hover,
+#memory:hover,
+#pulseaudio:hover,
+#clock:hover,
+#custom-power:hover {
+	transition-property: background-color;
+	transition-duration: .25s;
+	background: rgba(128, 128, 128, 0.5);
+}
+
+#custom-power {
+	padding-left: 3px;
+	padding-right: 5px;
+}
+
+.modules-right {
+	margin-right: 1em;
+}
+
+#mpris {
+	padding: 0px 10px;
+	color: rgba(30, 215, 96, 1.0);
+	border-bottom: 1px solid rgba(30, 215, 96, 1.0);
+	background: rgba(128, 128, 128, 0.5);
+}
+
+#custom-separator {
+	padding: 0px;
+	color: rgba(128, 128, 128, 1.0);
+}
